@@ -16,3 +16,9 @@ jobs:
               with:
                   input_file: source.json
                   output_file: min_source.json
+
+            - name: Commit and push changes
+              uses: stefanzweifel/git-auto-commit-action@v4
+              with:
+                  commit_message: "Add minified JSON file"
+                  file_pattern: min_source.json
